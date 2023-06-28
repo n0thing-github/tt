@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--数据绑定的根元素-->
+    <div id="app">
+        <ul>
+            <li v-for="(item,index) in todos":key="index">{{index}}:{{item}}</li>
+        </ul>
+    </div>
+
+    <!--引入vue.js-->
+    <script src="js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                todos: ["学习Vue官方文档", "慢跑", "看电影","背单词"]
+            }
+        })
+    </script>
+</body>
+</html>

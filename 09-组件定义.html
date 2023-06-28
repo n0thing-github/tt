@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <!--定义一个计数器组件 counter-->
+    <counter></counter>
+  </div>
+  <script src="js/vue.js"></script>
+  <script>
+    //注册一个叫counter组件(自定义的HTML标签)
+    Vue.component('counter',{
+      template:`<div>
+      <h3>点赞次数：{{count}}</h3>
+      <button>赞[+]</button>
+      <button>踩[-]</button> 
+    </div>`,
+    data(){
+      return{
+        count:8
+      }
+    },
+    methods:{
+      increase(){
+        this.count++;
+      },
+      descrease(){
+        this.count--;
+      }
+    }
+    });
+    new Vue({
+      el:"#app"
+    })
+  </script>
+</body>
+</html>
