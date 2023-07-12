@@ -10,7 +10,7 @@
     <!--数据绑定的根元素-->
     <div id="app">
         <h2>{{message}}</h2>
-        <button @click="reverMessage(101)">反转文字</button>
+        <button @click="reverseMessage(500)">反转文字</button>
     </div>
 
     <!--引入vue.js-->
@@ -23,7 +23,7 @@
             },
             methods:{
                 reverseMessage:function(id){
-                    console.log(id);
+                    console.log(id)
                     this.message=this.message.split('').reverse().join('')
                 }
             }

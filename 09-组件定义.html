@@ -17,8 +17,8 @@
     Vue.component('counter',{
       template:`<div>
       <h3>点赞次数：{{count}}</h3>
-      <button>赞[+]</button>
-      <button>踩[-]</button> 
+      <button @click="increase">赞[+]</button>
+      <button @click="descrease">踩[-]</button> 
     </div>`,
     data(){
       return{
@@ -34,6 +34,7 @@
       }
     }
     });
+    
     new Vue({
       el:"#app"
     })
